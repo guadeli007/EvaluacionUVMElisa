@@ -1,1 +1,20 @@
-<p>frm-prospectos works!</p>
+
+<form action="procesar_formulario.php" method="POST">
+    <label for="nombre" class="lblform-label">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" class="txtfrm-input" required><br><br>
+
+    <label for="appaterno" class="lblform-label">Apellido Paterno:</label><br>
+    <input type="text" id="appaterno" name="appaterno" class="txtfrm-input" required><br><br>
+
+    <label for="email" class="lblform-label">Correo electrónico:</label><br>
+    <input type="email" id="email" name="email" class="txtfrm-input" required><br><br>
+
+    <label for="celular" class="lblform-label">Celular:</label><br>
+    <input type="tel" id="celular" name="celular" class="txtfrm-input" required><br><br>
+
+    <!-- <input type="hidden" id="urlreferrer" name="urlreferrer">
+    <input type="hidden" id="dispositivo" name="dispositivo"> -->
+
+
+    <input type="submit" class="rectangular-button" value="Enviar">
+</form>
