@@ -26,9 +26,9 @@ export class FrmProspectosComponent {
     const userAgent = navigator.userAgent;
 
     const patrones = {
-      escritorio: /Windows|Macintosh|Linux/,
-      tableta: /iPad|Android(?!.*Mobile)|Tablet|KFAPWI/,
-      movil: /Mobile|Android|iPhone|BlackBerry|IEMobile|Opera Mini/
+      Desktop: /Windows|Macintosh|Linux/,
+      Tableta: /iPad|Android(?!.*Mobile)|Tablet|KFAPWI/,
+      Movil: /Mobile|Android|iPhone|BlackBerry|IEMobile|Opera Mini/
     };
 
     const clavesPatrones = Object.keys(patrones);
