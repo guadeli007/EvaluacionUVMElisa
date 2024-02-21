@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { tap, catchError } from 'rxjs/operators';
+import { EnviarpostService } from '../../services/enviarpost.service'; // Ajusta la ruta según la ubicación real del servicio
 
 @Component({
   selector: 'app-enviar-apost',
@@ -9,46 +7,33 @@ import { tap, catchError } from 'rxjs/operators';
   styleUrls: ['./enviar-apost.component.css']
 })
 export class EnviarAPostComponent {
+  constructor(private enviarpostService: EnviarpostService) { } // Inyecta el servicio en el constructor
 
-  constructor(private http: HttpClient) { }
+    //console.log("Clic al botón");
 
-  enviarInformacion(): Observable<any> {
-  //Datos a enviar
-  const datos = new FormData();
-  datos.append('nombre', "Elisa");
-  datos.append('appaterno', 'Garcia');
-  datos.append('email', 'uno@dos.com');
-  datos.append('celular', '5522223333');
-  datos.append('urlreferrer', 'htps://localhost');
-  datos.append('dispositivo', 'Desktop');
-  datos.append('banner', 'elisa');
-  datos.append('CID', '2016705784.1697574806');
-  datos.append('verify_token', 'UVM.G0-24');
-  datos.append('carrera', 'INGLES');
-  datos.append('carreraInteres', '828');
-  datos.append('subNivelInteres', 'EC');
-  datos.append('ciclo', '24-1');
-  datos.append('gclid', '');
-  datos.append('utm_campaign', '');
-  datos.append('marcable', '0');
+    enviarDatos() {
+    //console.log("Clic al botón");
+    const nombre = 'Elisa';
+    const appaterno = 'Garcia';
+    const email = 'uno@dos.com';
+    const celular = '5522223333';
+    const urlreferrer = 'htps://localhost';
+    const dispositivo = 'Desktop';
+    const carrera = 'INGLES';
+    const carreraInteres = '828';
+    const subNivelInteres = 'EC';
+    const ciclo = '24-1';
+    const marcable = '0';
+    const campusLargo='EN LINEA';
+    const nivelInteres='EC'
 
-
-    const cabeceras = new HttpHeaders();
-    return this.http.post('https://webhooksqa.uvm.mx/proc-leads/lead/medios.php', datos, { headers: cabeceras })
-      .pipe(
-        tap((respuesta: any) => {
-          console.log('Respuesta del servidor:', respuesta);
-        }),
-        catchError((error) => {
-          console.error('Error al enviar la información:', error);
-          throw error;
-        })
-      );
+    this.enviarpostService.enviarInformacion(nombre, appaterno, email, celular, urlreferrer, dispositivo, carrera,carreraInteres, subNivelInteres, ciclo, marcable,campusLargo,nivelInteres).subscribe({
+      next: (response) => {
+        console.log(response); 
+      },
+      error: (error) => {
+        console.error(error); 
+      }
+    });
   }
-
-  onClickEnviar() {
-    this.enviarInformacion().subscribe();
-    console.log("Se dio clic en botón");
-  }
-
 }
