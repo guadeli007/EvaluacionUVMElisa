@@ -17,7 +17,7 @@ export class EnviarAPostComponent {
     const apaterno = 'Garcia';
     const email = 'uno@dos.com';
     const celular = '5522223333';
-    const urlreferrer = 'htps://localhost';
+    const urlreferrer = 'https://guadeli007.github.io/EvaluacionUVMElisa/';
     const dispositivo = 'Desktop';
     const carrera = 'INGLES';
     const carreraInteres = '828';
