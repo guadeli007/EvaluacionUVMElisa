@@ -14,7 +14,7 @@ export class EnviarAPostComponent {
     enviarDatos() {
     //console.log("Clic al botón");
     const nombre = 'Elisa';
-    const appaterno = 'Garcia';
+    const apaterno = 'Garcia';
     const email = 'uno@dos.com';
     const celular = '5522223333';
     const urlreferrer = 'htps://localhost';
@@ -27,7 +27,7 @@ export class EnviarAPostComponent {
     const campusLargo='EN LINEA';
     const nivelInteres='EC'
 
-    this.enviarpostService.enviarInformacion(nombre, appaterno, email, celular, urlreferrer, dispositivo, carrera,carreraInteres, subNivelInteres, ciclo, marcable,campusLargo,nivelInteres).subscribe({
+    this.enviarpostService.enviarInformacion(nombre, apaterno, email, celular, urlreferrer, dispositivo, carrera,carreraInteres, subNivelInteres, ciclo, marcable,campusLargo,nivelInteres).subscribe({
       next: (response) => {
         console.log(response); 
       },

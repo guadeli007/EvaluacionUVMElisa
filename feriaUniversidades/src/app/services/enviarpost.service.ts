@@ -7,13 +7,13 @@
   export class EnviarpostService {
     constructor(private http: HttpClient) { }
 
-    enviarInformacion(nombre: string, appaterno: string, 
+    enviarInformacion(nombre: string, apaterno: string, 
       email: string, celular: string,urlreferrer: string, dispositivo: string,
       carrera: string, carreraInteres: string,subNivelInteres: string, ciclo: string,
       marcable: string, campusLargo:string, nivelInteres:string) {
       const body = new FormData();
       body.append('nombre', nombre);
-      body.append('appaterno', appaterno);
+      body.append('apaterno', apaterno);
       body.append('email', email);
       body.append('celular', celular);
       body.append('urlreferrer', urlreferrer);
