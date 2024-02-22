@@ -8,8 +8,6 @@ import { DatosService } from '../../services/datos.service';
   styleUrls: ['./enviar-apost.component.css']
 })
 export class EnviarAPostComponent {
-  mostrarElementos: boolean = false;
-  
   constructor(private enviarpostService: EnviarpostService,private datosService: DatosService) { } 
 
   public nombreDesdeForm:string;
@@ -59,7 +57,6 @@ export class EnviarAPostComponent {
       console.log("CarreraInteres:", datos.carreraInteres);
       console.log("nivelInteres:", datos.nivelInteres);
       console.log("Ciclo:", datos.ciclo);
-      this.mostrarElementos = true;
     });
 
     // Llama al método enviarInformacion del servicio EnviarpostService
