@@ -1,5 +1,5 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
-//import { EventEmitter } from 'stream';
+import { Component, Input, OnInit } from '@angular/core';
+import { DatosService } from '../../services/datos.service';
 
 @Component({
   selector: 'app-frm-prospectos',
@@ -7,20 +7,18 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
   styleUrls: ['./frm-prospectos.component.css']
 })
 export class FrmProspectosComponent implements OnInit {
-
-  //@Output() mensaje=new EventEmitter<{nombre:string,apaterno:string}>();
-
+  
   dispositivoInfo: string;
   urlReferrer: string;
   valorNombre: string = '';
   valorApaterno: string = '';
   valorEmail: string = '';
   valorCelular: string = '';
+  @Input() dataEntrante:{nombre:string, apaterno:string, correo:string, celular:string, dispositivoInfo:string, navegador:string};
 
-  constructor() { }
+  constructor(private datosService: DatosService) { }
 
   ngOnInit(): void {
-    console.log("ngOnInit iniciando...");
     this.obtenerInformacionDispositivo();
   }
 
@@ -55,8 +53,22 @@ export class FrmProspectosComponent implements OnInit {
     
     return "Desconocido";
   }
+
   onClickSiguiente() {
-    // Aquí puedes colocar el código que deseas ejecutar cuando se hace clic en el botón
-    console.log('Se hizo clic en el botón');
+    console.log("Valor del nombre:", this.valorNombre);
+    console.log("Valor del apellido paterno:", this.valorApaterno);
+    console.log("Valor del correo electrónico:", this.valorEmail);
+    console.log("Valor del celular:", this.valorCelular);
+
+    this.datosService.disparadorFrmProspectos.emit({
+      nombre: this.valorNombre,
+      apaterno: this.valorApaterno,
+      correo: this.valorEmail,
+      celular: this.valorCelular,
+      dispositivoInfo: this.dispositivoInfo,
+      navegador: navigator.userAgent
+    });
+
   }
+  
 }

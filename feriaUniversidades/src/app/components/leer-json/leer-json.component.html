@@ -1,25 +1,20 @@
 <p>Campus:</p>
-<select id="campus">
-    <option value="">Selecciona una opción</option>
-  </select>
-  <p>Carrera:</p>
-  <select id="carrera">
-    <option value="">Selecciona una opción</option>
-  </select>
-  <p>Carrera de interés:</p>
-  <select id="carerainteres">
-    <option value="">Selecciona una opción</option>
-  </select>
-  <p>Nivel de interés:</p>
-  <select id="nivelinteres">
-    <option value="">Selecciona una opción</option>
-  </select>
-  <p>Sub nivel interés:</p>
-  <select id="subnivelinteres">
-    <option value="">Selecciona una opción</option>
-  </select>
-  <p>Ciclo:</p>
-  <select id="ciclo">
-    <option value="">Selecciona una opción</option>
-  </select>
-
+<select id="campus" (change)="enviarInformacion()">
+  <option value="">Selecciona una opción</option>
+</select>
+<p>Carrera:</p>
+<select id="carrera" (change)="enviarInformacion()">
+  <option value="">Selecciona una opción</option>
+</select>
+<p>Carrera de interés:</p>
+<select id="carerainteres" (change)="enviarInformacion()">
+  <option value="">Selecciona una opción</option>
+</select>
+<p>Nivel de interés:</p>
+<select id="nivelinteres" (change)="enviarInformacion()">
+  <option value="">Selecciona una opción</option>
+</select>
+<p>Ciclo:</p>
+<select id="ciclo" (change)="enviarInformacion()">
+  <option value="">Selecciona una opción</option>
+</select>

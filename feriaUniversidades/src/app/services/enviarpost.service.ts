@@ -31,25 +31,60 @@ import { Console } from 'console';
       formdata.append('ciclo', ciclo);
       formdata.append('gclid', '');
       formdata.append('utm_campaign', '');
-           
-      console.log(formdata.get.toString());
+
+      console.log("LAYENDO VALOR NOMBRE Y APELLIDO formdata");
+      console.log(formdata.get("nombre"));
+      console.log(formdata.get("apaterno"));
+      console.log(formdata.get("campusLargo"));
+      console.log(formdata.get("carrera"));
+      console.log(formdata.get("ciclo"));
 
       const requestOptions: RequestInit = {
         method: "POST",
         body: formdata,
-        redirect: "follow",
-        mode: 'no-cors'
+        redirect: "follow"//,
+        //mode: 'no-cors'
       };
       console.log("inicia fetch");
-      fetch("https://webhooks.uvm.mx/proc-leads/lead/medios.php", requestOptions)
-        .then((response) => response.text())
-        .then((result) => console.log(result))
-        .catch((error) => console.error(error));
-        
-        console.log("finaliza fetch e inica return"); 
+      // fetch("https://webhooksqa.uvm.mx/proc-leads/lead/medios.php", requestOptions)
+      //   .then((response) => response.text())
+      //   .then((result) => console.log(result))
+      //   .catch((error) => console.error(error));
 
       //return this.http.post('https://webhooksqa.uvm.mx/proc-leads/lead/medios.php', formdata);
+    
+// console.log("Entrando al servicio");
+//       const formdata = new FormData();
+//       formdata.append("nombre", "Elisa DesdeSitio");
+//       formdata.append("apaterno", "Simulación");
+//       formdata.append("email", "inicio.uno@gmail.com");
+//       formdata.append("celular", "9988775544");
+//       formdata.append("urlreferrer", "http://localhost:4200/");
+//       formdata.append("dispositivo", "Escritorio");
+//       formdata.append("banner", "elisa");
+//       formdata.append("CID", "2016705784.1697574806");
+//       formdata.append("verify_token", "UVM.G0-24");
+//       formdata.append("marcable", "1");
+//       formdata.append("campusLargo", "EDUCACION CONTINUA");
+//       formdata.append("carrera", "FINANZAS Y CONTABILIDAD");
+//       formdata.append("carreraInteres", "717");
+//       formdata.append("subNivelInteres", "");
+//       formdata.append("nivelInteres", "DIPLOMADO");
+//       formdata.append("ciclo", "24-1");
+//       formdata.append("gclid", "");
+//       formdata.append("utm_campaign", "");
       
-    }
+//       const requestOptions: RequestInit = {
+//         method: "POST",
+//         body: formdata,
+//         redirect: "follow"
+//       };
+      
+//       fetch("https://webhooksqa.uvm.mx/proc-leads/lead/medios.php", requestOptions)
+//         .then((response) => response.text())
+//         .then((result) => console.log(result))
+//         .catch((error) => console.error(error));
+      
+     }
     
   }

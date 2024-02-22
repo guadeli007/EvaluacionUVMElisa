@@ -1,11 +1,11 @@
 
-<form action="procesar_formulario.php" method="POST">
+<div>
     <label for="nombre" class="lblform-label">Nombre:</label><br>
- <input type="text" id="nombre" name="nombre" class="txtfrm-input" required [(ngModel)]="valorNombre">
+ <input type="text" id="nombre" name="nombre" class="txtfrm-input" [(ngModel)]="valorNombre" required>
 <br><br>
 
     <label for="appaterno" class="lblform-label">Apellido Paterno:</label><br>
-    <input type="text" id="apaterno" name="apaterno" class="txtfrm-input" required [(ngModel)]="valorApaterno"><br><br>
+    <input type="text" id="apaterno" name="apaterno" class="txtfrm-input" [(ngModel)]="valorApaterno" required><br><br>
 
     <label for="email" class="lblform-label">Correo electrónico:</label><br>
     <input type="email" id="email" name="email" class="txtfrm-input" required [(ngModel)]="valorEmail"><br><br>
@@ -17,9 +17,9 @@
     <input type="hidden" id="dispositivo" name="dispositivo" [value]="dispositivoInfo">
 
 
-    <div class="imagen-con-hover" onclick="onClickSiguiente()"></div>
+    <div class="imagen-con-hover" (click)="onClickSiguiente()"></div>
 
     <!-- <p>El valor es: {{urlReferrer}}</p>
     <p [innerText]="dispositivoInfo"></p> -->
 
-</form>
+</div>
