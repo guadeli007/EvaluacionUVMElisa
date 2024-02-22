@@ -4,6 +4,5 @@ import { EventEmitter, Injectable, Output } from '@angular/core';
   providedIn: 'root'
 })
 export class DatosService {
-  @Output() disparadorFrmProspectos=new EventEmitter<{nombre:string, apaterno:string, correo:string, celular:string, dispositivoInfo:string, navegador:string}>();
-  @Output() dataEntranteSelect = new EventEmitter<{campus:string, carrera:string, carreraInteres:string, nivelInteres:string, ciclo:string}>();
+  @Output() disparadorFrmProspectos=new EventEmitter<{nombre:string, apaterno:string, correo:string, celular:string, dispositivoInfo:string, navegador:string,campus:string, carrera:string, carreraInteres:string, nivelInteres:string, ciclo:string}>();
 }

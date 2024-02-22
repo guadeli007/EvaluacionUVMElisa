@@ -109,15 +109,15 @@ export class LeerJSONComponent implements OnInit {
         const ciclo = (document.getElementById('ciclo') as HTMLSelectElement).value;
     
         // Verificar que todas las opciones hayan sido seleccionadas
-        if (campus && carrera && carreraInteres && nivelInteres && ciclo) {
-          this.datosService.dataEntranteSelect.emit({
-            campus: campus,
-            carrera: carrera,
-            carreraInteres: carreraInteres,
-            nivelInteres: nivelInteres,
-            ciclo: ciclo
-        });
-        };
+        // if (campus && carrera && carreraInteres && nivelInteres && ciclo) {
+        //   this.datosService.dataEntranteSelect.emit({
+        //     campus: campus,
+        //     carrera: carrera,
+        //     carreraInteres: carreraInteres,
+        //     nivelInteres: nivelInteres,
+        //     ciclo: ciclo
+        // });
+        // };
           // // Enviar la información al otro componente utilizando el servicio de datos
           // this.datosService.enviarInformacion(informacion);
       }

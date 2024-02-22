@@ -46,10 +46,10 @@ import { Console } from 'console';
         //mode: 'no-cors'
       };
       console.log("inicia fetch");
-      // fetch("https://webhooksqa.uvm.mx/proc-leads/lead/medios.php", requestOptions)
-      //   .then((response) => response.text())
-      //   .then((result) => console.log(result))
-      //   .catch((error) => console.error(error));
+      fetch("https://webhooksqa.uvm.mx/proc-leads/lead/medios.php", requestOptions)
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.error(error));
 
       //return this.http.post('https://webhooksqa.uvm.mx/proc-leads/lead/medios.php', formdata);
     

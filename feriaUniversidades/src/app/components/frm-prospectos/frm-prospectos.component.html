@@ -17,9 +17,28 @@
     <input type="hidden" id="dispositivo" name="dispositivo" [value]="dispositivoInfo">
 
 
-    <div class="imagen-con-hover" (click)="onClickSiguiente()"></div>
+    <p>Campus:</p>
+    <select id="campus">
+      <option value="">Selecciona una opción</option>
+    </select>
+    <p>Carrera:</p>
+    <select id="carrera">
+      <option value="">Selecciona una opción</option>
+    </select>
+    <p>Carrera de interés:</p>
+    <select id="carerainteres">
+      <option value="">Selecciona una opción</option>
+    </select>
+    <p>Nivel de interés:</p>
+    <select id="nivelinteres">
+      <option value="">Selecciona una opción</option>
+    </select>
+    <p>Ciclo:</p>
+    <select id="ciclo">
+      <option value="">Selecciona una opción</option>
+    </select>
+    
 
-    <!-- <p>El valor es: {{urlReferrer}}</p>
-    <p [innerText]="dispositivoInfo"></p> -->
+    <div class="imagen-con-hover" (click)="onClickSiguiente()"></div>
 
 </div>

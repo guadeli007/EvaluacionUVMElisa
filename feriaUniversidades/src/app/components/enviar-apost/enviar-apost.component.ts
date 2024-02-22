@@ -27,13 +27,19 @@ export class EnviarAPostComponent {
     let ciclo:string ='';// '24-2';
 
     // Suscribirse al evento disparadorFrmProspectos para recibir los datos emitidos
-    this.datosService.disparadorFrmProspectos.subscribe((datos: {nombre:string, apaterno:string, correo:string, celular:string, dispositivoInfo:string, navegador:string}) => {
+    this.datosService.disparadorFrmProspectos.subscribe((datos: {nombre:string, apaterno:string, correo:string, celular:string, dispositivoInfo:string, navegador:string, campus:string, carrera:string, carreraInteres:string, nivelInteres:string, ciclo:string}) => {
       nombre=datos.nombre;
       apaterno=datos.apaterno;
       email=datos.correo;
       celular=datos.celular;
       dispositivo=datos.dispositivoInfo;
       urlreferrer=datos.navegador;
+
+      campusLargo=datos.campus;
+      carrera = datos.carrera;
+      carreraInteres = datos.carreraInteres;
+      nivelInteres=datos.nivelInteres;
+      ciclo =datos.ciclo;
 
       console.log("Datos recibidos desde el servicio:");
       console.log("Nombre:", datos.nombre);
@@ -42,15 +48,7 @@ export class EnviarAPostComponent {
       console.log("Celular:", datos.celular);
       console.log("Información del dispositivo:", datos.dispositivoInfo);
       console.log("Navegador:", datos.navegador);
-    });
 
-    this.datosService.dataEntranteSelect.subscribe((datos:{campus:string, carrera:string, carreraInteres:string, nivelInteres:string, ciclo:string}) => {
-      campusLargo=datos.campus;
-      carrera = datos.carrera;
-      carreraInteres = datos.carreraInteres;
-      nivelInteres=datos.nivelInteres;
-      ciclo =datos.ciclo;
-      
       console.log("Datos recibidos desde el servicio de los selects:");
       console.log("Campus:", datos.campus);
       console.log("Carrera:", datos.carrera);
