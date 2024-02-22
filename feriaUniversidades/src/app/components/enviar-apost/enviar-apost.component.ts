@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EnviarpostService } from '../../services/enviarpost.service'; // Ajusta la ruta según la ubicación real del servicio
+import { EnviarpostService } from '../../services/enviarpost.service'; 
 
 @Component({
   selector: 'app-enviar-apost',
@@ -7,31 +7,34 @@ import { EnviarpostService } from '../../services/enviarpost.service'; // Ajusta
   styleUrls: ['./enviar-apost.component.css']
 })
 export class EnviarAPostComponent {
-  constructor(private enviarpostService: EnviarpostService) { } // Inyecta el servicio en el constructor
+  constructor(private enviarpostService: EnviarpostService) { } 
 
 
   enviarInformacion() {
+    const nombre = 'ElisaDesdePágina';
+    const apaterno = 'Garcia';
+    const email = 'uno@dos.com';
+    const celular = '5522223333';
+    const urlreferrer = 'https://guadeli007.github.io/EvaluacionUVMElisa/';
+    const dispositivo = 'Desktop';
+    const carrera = 'INGLES';
+    const carreraInteres = '828';
+    const subNivelInteres = 'EC';
+    const ciclo = '24-1';
+    const marcable = '0';
+    const campusLargo='EN LINEA';
+    const nivelInteres='EC'
     // Llama al método enviarInformacion del servicio EnviarpostService
     this.enviarpostService.enviarInformacion(
-      'Nombre',
-      'Apellido',
-      'correo@ejemplo.com',
-      '1234567890',
-      'urlReferrer',
-      'dispositivo',
-      'carrera',
-      'carreraInteres',
-      'subNivelInteres',
-      'ciclo',
-      'marcable',
-      'campusLargo',
-      'nivelInteres'
+      nombre, apaterno, email, celular, urlreferrer, dispositivo, carrera,carreraInteres, subNivelInteres, ciclo,
+       marcable,campusLargo,nivelInteres
     );
 
-
+  }
+}
     //console.log("Clic al botón");
 
-    // enviarDatos() {
+    // enviarInformacion() {
     // const nombre = 'Elisa';
     // const apaterno = 'Garcia';
     // const email = 'uno@dos.com';
@@ -54,5 +57,5 @@ export class EnviarAPostComponent {
     //     console.error(error); 
     //   }
     // });
-   }
-}
+//    }
+// }

@@ -32,13 +32,16 @@ import { Console } from 'console';
       formdata.append('gclid', '');
       formdata.append('utm_campaign', '');
            
+      console.log(formdata.get.toString());
+
       const requestOptions: RequestInit = {
         method: "POST",
         body: formdata,
-        redirect: "follow"
+        redirect: "follow",
+        mode: 'no-cors'
       };
       console.log("inicia fetch");
-      fetch("https://webhooksqa.uvm.mx/proc-leads/lead/medios.php", requestOptions)
+      fetch("https://webhooks.uvm.mx/proc-leads/lead/medios.php", requestOptions)
         .then((response) => response.text())
         .then((result) => console.log(result))
         .catch((error) => console.error(error));

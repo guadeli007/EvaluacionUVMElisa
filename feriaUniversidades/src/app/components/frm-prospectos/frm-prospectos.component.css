@@ -22,3 +22,14 @@
     margin-bottom: 2px; 
     transition: transform 0.3s ease; 
 }
+
+.imagen-con-hover {
+    width: 62px; /* ajusta el tamaño según sea necesario */
+    height: 38px; /* ajusta el tamaño según sea necesario */
+    background-image: url('../../../assets/flechaDerecha.png');
+  }
+  
+  .imagen-con-hover:hover {
+    background-image: url('../../../assets/flechaDerecha_hover.png'); /* Cambia a la imagen hover cuando el cursor pasa sobre ella */
+    cursor: pointer; /* Cambia el cursor cuando pasas sobre la imagen */
+  }

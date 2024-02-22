@@ -8,6 +8,7 @@ import { FrmProspectosComponent } from './components/frm-prospectos/frm-prospect
 import { LeerJSONComponent } from './components/leer-json/leer-json.component';
 import { EnviarAPostComponent } from './components/enviar-apost/enviar-apost.component';
 import { EnviarpostService } from './services/enviarpost.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EnviarpostService } from './services/enviarpost.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     EnviarpostService
